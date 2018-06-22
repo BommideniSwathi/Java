@@ -1,0 +1,1559 @@
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="js/form-validation.js"></script>
+<script src= "myUsers.js"></script>
+  </head>
+   <SCRIPT type="text/javascript">
+    window.history.forward();
+    function noBack() { window.history.forward(); 
+</SCRIPT>
+ <script>
+  var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+ $scope.products = ["255.255.255.243", "255.255.255.244", "255.255.255.245" ,"255.255.255.246", "255.255.255.247"];
+    $scope.addItem = function () {
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.products.indexOf($scope.addMe) == -1) {
+            $scope.products.push($scope.addMe);
+        } else {
+            $scope.errortext = "The item is already in your target list.";
+        }
+    }
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";    
+        $scope.products.splice(x, 1);
+    }
+$scope.showMe1 = true;
+$scope.showMe2 = true;
+$scope.showMea = true;
+$scope.showMeb = true;
+$scope.showMec = true;
+$scope.showMed = true;
+$scope.showMee = true;
+$scope.showMef = true;
+ $scope.save8a = true;
+ $scope.save9a = true;
+ $scope.save9b = true;
+
+$scope.added = function () {
+  $scope.showMe1 =  false;
+   $scope.showMe3 =  false;
+   $scope.showMe4 =  false;
+}
+$scope.saveinfo8a = function () {
+ $scope.saved8a = true; 
+ $scope.save8a = false;
+}
+$scope.saveinfo9a = function () {
+ $scope.saved9a = true; 
+ $scope.save9a= false;
+}
+$scope.saveinfo9b = function () {
+ $scope.saved9b = true; 
+ $scope.save9b = false;
+}
+
+$scope.buy1 = function () {
+ $scope.showMea1 = true; 
+ $scope.showMea = false;
+}
+$scope.buy2 = function () {
+ $scope.showMeb1 = true; 
+ $scope.showMeb = false;
+}
+$scope.buy3= function () {
+ $scope.showMec1= true; 
+ $scope.showMec = false;
+}
+$scope.buy4 = function () {
+ $scope.showMed1 = true; 
+ $scope.showMed = false;
+}
+$scope.buy5 = function () {
+ $scope.showMee1 = true; 
+ $scope.showMee = false;
+}
+$scope.buy6 = function () {
+ $scope.showMef1 = true; 
+ $scope.showMef = false;
+}
+$scope.signin = function () {
+  $scope.showMe2 =  false;
+  $scope.showMe3 =  true;
+  $scope.showMe4 =   true;
+}
+$scope.product1= function () {
+$scope.showMe2 = false;
+  $scope.showMe3 =  false;
+  $scope.showMe4 =   false;
+  $scope.showMe5a = true;
+}
+$scope.product2= function () {
+  $scope.showMe2 = false;
+  $scope.showMe3 =  false;
+  $scope.showMe4 =   false;
+  $scope.showMe5b = true;
+}
+$scope.product3= function () {
+$scope.showMe2 = false;
+  $scope.showMe3 =  false;
+  $scope.showMe4 =   false;
+  $scope.showMe5c = true;
+}
+
+$scope.access1= function () {
+$scope.showMe2 = false;
+  $scope.showMe6 =  true;
+  $scope.showMe7a =  true;
+  $scope.showMe5 =  false;
+  $scope.showMe3 =  false;
+   $scope.showMe5a= false;
+    $scope.showMe5b = false;
+	 $scope.showMe5c = false;
+  
+}
+$scope.access2= function () {
+$scope.showMe2 = false;
+  $scope.showMe6 =  true;
+  $scope.showMe7b =  true;
+  $scope.showMe5 =  false;
+  $scope.showMe3 =  false;
+   $scope.showMe5a= false;
+    $scope.showMe5b = false;
+	 $scope.showMe5c = false;
+  
+}
+$scope.access3= function () {
+$scope.showMe2 = false;
+  $scope.showMe6 =  true;
+  $scope.showMe7c =  true;
+  $scope.showMe5 =  false;
+  $scope.showMe3 =  false;
+   $scope.showMe5a= false;
+    $scope.showMe5b = false;
+	 $scope.showMe5c = false;
+  
+}
+$scope.home= function () {
+$scope.showMe7a =  true;
+ $scope.showMe6 = true;
+ $scope.showMe8 =  false;
+ $scope.showMe9 =  false;
+  $scope.showMe10 =  false;
+  $scope.showMe11 =false;
+
+}
+$scope.target= function () {
+$scope.showMe8 =  true;
+$scope.showMe8a =  false;
+$scope.editUser = function () {
+$scope.showMe8a = true;
+}
+$scope.showMe9 = true;
+$scope.edit = function () {
+$scope.showMe9a = true;
+}
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+ $scope.showMe10 =  false;
+ $scope.showMe9 =  false;
+ $scope.showMe11 =false;
+ $scope.showMe12 =false;
+$scope.showMe13 =false;
+$scope.showMe14 =false;
+$scope.showMe15 =false;
+
+}
+$scope.host= function () {
+$scope.showMe9 =  true;
+ $scope.showMe9a = false;
+$scope.createHost=function()
+{
+ $scope.showMe9b = true;
+  $scope.showMe9a = false;
+}
+$scope.edit = function () {
+  $scope.showMe9a = true;
+   $scope.showMe9b = false;
+}
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+$scope.showMe8 =  false;
+ $scope.showMe10 =  false;
+ $scope.showMe11 = false;
+  $scope.showMe12 = false;
+$scope.showMe13 = false;
+$scope.showMe14 = false;
+$scope.showMe15 = false;
+
+}
+
+$scope.test= function () {
+ $scope.save10 =  true;
+ $scope.saved10 = false;
+$scope.execute= function () {
+  $scope.saved10 = true;
+ $scope.save10 = false;
+}
+
+$scope.showMe10 =  true;
+$scope.showMe9 =  false;
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+$scope.showMe8 = false;
+$scope.showMe11 =false;
+$scope.showMe12 =false;
+$scope.showMe13 =false;
+$scope.showMe14 =false;
+$scope.showMe15 =false;
+
+}
+
+$scope.result= function () {
+$scope.showMe10 =  false;
+$scope.showMe9 =  false;
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+$scope.showMe8 = false;
+$scope.showMe11 = true;
+$scope.showMe12 =false;
+$scope.showMe14 =false;
+scope.showMe13 =false;
+
+}
+$scope.profile= function (){
+$scope.showMe12 =true; 
+$scope.showMe10 =  false;
+$scope.showMe9 =  false;
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+$scope.showMe8 = false;
+$scope.showMe11 =false;
+$scope.showMe14 =true;
+
+}
+$scope.adding= function () {
+$scope.showMe14 =true;
+$scope.showMe15 =false;
+$scope.showMe12 =true;
+}
+$scope.editing= function () {
+$scope.showMe15 =true;
+$scope.showMe14 =false;
+$scope.showMe13 =false;
+$scope.showMe12 =true;
+$scope.showMe11 =false;
+
+}
+$scope.logout= function () {
+$scope.showMe2 =true;
+$scope.showMe3 =  false;
+$scope.showMe4 =   false;
+ $scope.showMe5 =  false;
+$scope.showMe6 = false;
+$scope.showMe7a = false;
+$scope.showMe7b = false;
+$scope.showMe7c = false;
+$scope.showMe8 = false;
+$scope.showMe9 =  false;
+$scope.showMe10 =  false;
+$scope.showMe11 =false;
+$scope.showMe12 =false;
+$scope.showMe13 =false;
+$scope.showMe14 =false;
+$scope.showMe15 =false;
+}
+});
+</script>
+<style>
+#product
+{
+width:50%;
+height:70%;
+}
+#circlecanvas
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 500px;
+  text-align: center;
+  background: rgb(109,194,75);
+}
+#circlecanvas1
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(0,162,224);
+  position:absolute;
+  top:40%;
+  left:20%;
+}
+#circlecanvas2
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(239,51,65);
+  position:absolute;
+  top:50%;
+  right:30%;
+}
+#circlecanvas3
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(255,218,41);
+  position:absolute;
+  top:20%;
+  right:50%;
+}
+#circlecanvas4
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(0,162,224);
+  position:absolute;
+  top:40%;
+  left:20%;
+}
+#circlecanvas5
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(239,51,65);
+  position:absolute;
+  top:30%;
+  right:20%;
+}
+#circlecanvas6
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(255,218,41);
+  position:absolute;
+  top:20%;
+  right:50%;
+}
+#circlecanvas7
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(109,194,75);
+  position:absolute;
+  top:25%;
+  right:15%;
+}
+#circlecanvas8
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(109,194,75);
+  position:absolute;
+  top:70%;
+  right:25%;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        display: block;
+		margin:0;
+        height:100%;
+        margin:auto;
+        width: 100%; 
+        }
+#row1
+{
+ display: block;
+		margin:0;
+        margin:auto;
+       width:50%;
+		height:300px;
+}
+
+#row2
+{
+ display: block;
+		margin:0;
+        margin:auto;
+         width:50%;
+		height:300px;
+}
+#row3
+{
+ display: block;
+		margin:0;
+        margin:auto;
+         width:100%;
+		height:300px;
+}
+#row4
+{
+ display: block;
+		margin:0;
+        margin:auto;
+         width:100%;
+		height:300px;
+}
+#row5
+{
+ display: block;
+		margin:0;
+        margin:auto;
+         width:100%;
+		height:300px;
+}
+
+p1
+{
+position:absolute;
+right:20px;
+top:50px;
+}
+
+
+</style>
+
+<body ng-app="myApp" ng-controller="myCtrl" onload="myFunction()">
+  <form name="myForm">
+  <div class="container-fluid">	
+  <div class="row">
+  <div class="col-sm-7">
+  <div ng-show="showMe2">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://www.hdwallpaperswine.com/web/wallpapers/black-white-new-york-city/thumbnail/lg.jpeg">
+	  <div id="circlecanvas1" width="100" height="100"></div>
+	  <div id="circlecanvas2" width="100" height="100"></div>
+	  <div id="circlecanvas3" width="100" height="100"></div>
+	  <div id="circlecanvas7" width="100" height="100"></div>
+	  </div>
+    <div class="item">
+      <img src="http://papers.co/wallpaper/papers.co-aq02-ai-artificial-intelligence-art-3d-illustration-bw-dark-34-iphone6-plus-wallpaper.jpg"  alt="Chicago">
+    </div>
+    <div class="item">
+      <img src="https://www.amethystrecovery.org/wp-content/uploads/2016/06/Teamwork-2.jpg" alt="New York">
+	  <div id="circlecanvas4" width="100" height="100"></div>
+	  <div id="circlecanvas5" width="100" height="100"></div>
+	  <div id="circlecanvas6" width="100" height="100"></div>
+	  <div id="circlecanvas8" width="100" height="100"></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</div>
+<div ng-show="showMe6">
+<div class="row">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">   
+    <ul class="nav navbar-nav navbar-right">
+	 <li class="active"><a href="#menu5" ng-click="home()">Home</a></li>
+	  <li><a  href="#target" ng-click="target()">Target List</a></li>
+      <li><a  href="#hosts" ng-click="host()">Hosts</a></li>
+	  <li><a href="#newtest" ng-click="test()">New Test</a></li>
+	  <li><a href="#results" ng-click="result()">Results</a></li>
+	    <li><a href="#profile" ng-click="profile()">Profile</a></li>
+      <li><a href="#logout" ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+</br></br></br></br></br>
+<div ng-show="showMe7a">
+<div class="row">
+<div class="container-fluid" >
+<div class="col-sm-5">
+<img src="http://giasaysthat.com/wp-content/uploads/2017/01/DSC04846.jpg" alt="image" width="300px"></br></br>
+<div ng-show="showMea1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMea"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy1()" id="submit"><b>BUY NOW</b></button></div></br>
+</div>
+<div class="col-sm-7">
+<h2>Safewash Liquid Detergent For Woollens:</h2>
+<h3> Owing to its thickness, winter wear becomes a breeding ground for germs. Wipro Safewash, enriched with the goodness of Neem, keeps your clothes germ-free, stops them from shrinking and keeps them looking fresh and new. Even your old clothes will never lose their soft and fluffy look.</h3>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="container-fluid">
+<div class="col-sm-7">
+<h2>Safewash Liquid Detergent For Daily & Premium Wear:</h2>
+<h3>Your premium wear needs superior care be it from surprise spills or regular wear and tear. Wipro Safewash Liquid detergent is specially designed for your fine fabrics and festive attire. The gentle care of this detergent will not only safeguard from stains but also keep them germ free. Wipro Safewash detergent is now available in Andhra Pradesh.
+</h3>
+
+</div>
+
+<div class="col-sm-5">
+
+<img src="data:image/jpeg;base64,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" alt="wipro logo" width="300px"></br>
+<div ng-show="showMeb1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMeb"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy2()" id="submit"><b>BUY NOW</b></button></div></br>
+  
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div ng-show="showMe7b">
+
+<div class="row">
+
+<div class="container-fluid" >
+
+<div class="col-sm-5">
+
+<img src="https://www.wiproconsumerlighting.com/sites/default/files/garnet/320-X320-10%20%281%29.png" alt="image" width="300px"></br>
+<div ng-show="showMec1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMec"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy3()" id="submit"><b>BUY NOW</b></button></div></br>
+  
+</div>
+
+<div class="col-sm-7">
+
+<h2> Garnet 23W LED Bulb:</h2>
+<h3>The Garnet LED Bulb 23W (B22 CAP) saves 85% energy and provides light distribution in all directions, through its innovatively designed optics</h3>
+</div>
+
+</div>
+</div>
+<div class="row">
+
+<div class="container-fluid">
+
+<div class="col-sm-7">
+
+<h2>Garnet 3W LED Candle (E27 CAP):</h2>
+<h3>LED candles integrate an innovative design to create sparkling effects with high brightness LEDs and provide the best solution for chandeliers and lampshades.
+</h3>
+
+</div>
+
+<div class="col-sm-5">
+
+<img src="https://www.wiproconsumerlighting.com/sites/default/files/garnet/Garnet-3W-Classic-Candle-Bulb_E27_MC.png" alt="wipro logo" width="300px"></br>
+<div ng-show="showMed1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMed"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy4()" id="submit"><b>BUY NOW</b></button></div></br>
+  
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div ng-show="showMe7c">
+
+<div class="row">
+
+<div class="container-fluid" >
+
+<div class="col-sm-5">
+
+<img src="https://www.bing.com/th?id=OIP.o--rTxjGzQXQDfNu4h6DJwHaD4&w=285&h=157&c=7&o=5&dpr=1.45&pid=1.7" alt="wipro logo" width="300px"></br>
+<div ng-show="showMee1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMee"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy5()" id="submit"><b>BUY NOW</b></button></div></br>
+  
+</div>
+
+<div class="col-sm-7">
+
+<h2> Santoor Gold:</h2>
+<h3>"A special glow for special occasions"
+Santoor Gold with pure sandalwood and saffron extract,brings alive the ancient beauty traditions of Indian queens.
+Saffron nourishes your skin and makes it fairer while sandalwood soothes and imparts a glow.So you look every bit the queen that you are on every special occasion.</h3>
+</div>
+
+</div>
+</div>
+<div class="row">
+
+<div class="container-fluid">
+
+<div class="col-sm-7">
+
+<h2>Santoor Baby:</h2>
+<h3>Santoor Baby soap is made with carefully chosen natural ingredients like saffron, milk cream & almond oil.Almond oil is rich in Vitamin E which helps smoothen & nourish baby skin. Saffron has been used as a beauty herb for centuries. It helps in making skin fairer & has healing properties also. Milk cream gently cleanses your baby's skin. It also moisturizes baby's sensitive skin and keeps it hydrated and glowing. These ingredients have been trusted by mothers over years to provide essential nourishment to baby's skin to make it fair, healthy & glowing.
+
+</h3>
+
+</div>
+
+<div class="col-sm-5">
+
+<img src="https://www.bing.com/th?id=OIP.4nxUq_5ukDtanBBA4ovDAwHaHa&w=174&h=173&c=7&o=5&dpr=1.45&pid=1.7" alt="wipro logo" width="300px"></br>
+<div ng-show="showMef1"><h4><b><i style="color:green">Saved to Cart</i></b></h4></div>
+   <div ng-show="showMef"><button type="submit" class="btn btn-primary" name="submit" ng-click="buy6()" id="submit"><b>BUY NOW</b></button></div></br>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+<div ng-show="showMe11">
+<div class="col-sm-12" id="results">
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Run ID</th>
+        <th>Tool</th>
+        <th>Test Case</th>
+        <th>Queue Date and Time</th>
+        <th>status</th>
+		<th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>3257499101_561126_10.203.189.98</td>
+        <td>PASSIT</td>
+        <td>passit_windows_upgrade_test</td>
+        <td>May-28-2018,19:18 AM</td>
+        <td>config</td>
+		<td><a data-toggle="pill" href="#menu" ng-click="added()"><h5><b>Click Here</b></h5></a></td>
+      </tr>
+	  <tr>
+        <td>2</td>
+        <td>3257499101_561126_10.203.189.99</td>
+        <td>PASSIT</td>
+        <td>passit_windows_upgrade_test</td>
+        <td>May-28-2018,19:18 AM</td>
+        <td>config</td>
+		<td><a data-toggle="pill" href="#menu" ng-click="added()"><h5><b>Click Here</b></h5></a></td>
+      </tr>
+	  <tr>
+        <td>3</td>
+        <td>3257499101_561126_10.203.189.86</td>
+        <td>PASSIT</td>
+        <td>passit_windows_upgrade_test</td>
+        <td>May-28-2018,19:18 AM</td>
+        <td>config</td>
+		<td><a data-toggle="pill" href="#menu" ng-click="added()"><h5><b>Click Here</b></h5></a></td>
+      </tr>
+	   <tr>
+        <td>4</td>
+        <td>3257499101_561126_10.203.189.89</td>
+        <td>PASSIT</td>
+        <td>passit_windows_upgrade_test</td>
+        <td>May-28-2018,19:18 AM</td>
+        <td>config</td>
+		<td><a data-toggle="pill" href="#menu" ng-click="added()"><h5><b>Click Here</b></h5></a></td>
+      </tr>
+	   <tr>
+        <td>5</td>
+        <td>3257499101_561126_10.203.189.87</td>
+        <td>PASSIT</td>
+        <td>passit_windows_upgrade_test</td>
+        <td>May-28-2018,19:18 AM</td>
+        <td>config</td>
+		<td><a data-toggle="pill" href="#menu" ng-click="added()"><h5><b>Click Here</b></h5></a></td>
+      </tr>
+	  </tbody>
+	 </table>
+	 </div>
+	 </div>
+</div>
+
+<div ng-show="showMe12">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Profile</th>
+      </tr>
+    </thead>
+      <tr>
+        <td><ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#list">Profile</a></li>
+	 <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Departments
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#adding" ng-click="adding()">Add</a></li>
+      <li><a href="#" ng-click="editing()">Edit</a></li>
+      <li><a href="#" ng-click="deleting()">Delete</a></li> 
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Users
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#adding" ng-click="adding()">Add</a></li>
+      <li><a href="#editing" ng-click="editing()">Edit</a></li>
+      <li><a href="#deleting" ng-click="deleting()">Delete</a></li> 
+    </ul>
+  </li>
+  </ul></td></tr></table>
+	 	<div class="col-sm-4" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Profile</h3>
+  </header>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <label>Company:</label>                    <label>Wipro</label>
+  <br><br>
+    <label>Department:</label>          <label>Employee</label>
+  <br><br>
+    <label>Name:</label>            <label>Swathi</label>
+  <br><br>
+    <label>Email:</label>          <label>Swathi.bommideni@wipro.com</label> 
+  <br><br>
+    <label>Role:</label>             <label>Super User</label>
+  <br>
+ 	</div>
+	</div>
+	</div>
+	
+	 <div ng-show="showMe14">
+  <div class="col-sm-4" id="adding">
+ <div class="tab-content">
+    <div id="add" class="tab-pane fade">
+     	 	<div class="col-sm-4" id="ädding" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Profile</h3>
+  </header>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <label>Department Name:</label> 
+<input class="w3-input w3-border" type="text" ng-model="dName"  placeholder="Enter Department Name">	
+ 	</div>
+	 <div class="w3-row w3-margin-top">
+  <div ng-show="saved14"><h4><b><i style="color:green">Added Successfully</i></b></h4></div>
+  <div ng-show="save14"><button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete" ng-click="adddept()">&#10004;Add</button></div></div>
+	</div>
+   </div>
+</div>
+</div>
+  </div> 
+ 
+<div ng-show="showMe15">
+  <div class="col-sm-4" id="editing">
+  <div class="tab-content">
+	<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Edit Details</th>
+       </tr>
+	   </thead>
+	   <tbody>
+	   <tr>
+	   <td><div class="input-group">
+      <input id="address" type="text" class="form-control" name="email" placeholder="First Name"></div></td></tr>
+	  <tr><td><div class="input-group">
+      <input id="address" type="text" class="form-control" name="email" placeholder="Last Name"></div></td></tr>
+	  <tr><td><div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email"></div></td></tr>
+	  <tr><td><li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Department
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">GIS</a></li>
+      <li><a href="#">PES</a></li>
+      <li><a href="#">MFG</a></li> 
+	  <li><a href="#">FS</a></li>
+    </ul>
+  </li></td></tr>
+ <tr><td><li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">User Role
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Admin</a></li>
+      <li><a href="#">Employee</a></li>
+      <li><a href="#">Contracter</a></li> 
+    </ul>
+  </li></td></tr>
+  <tr><td align="right"><button type="submit"  name="save" id="save" ng-click="addItem()" class="btn btn-primary"><b>SAVE</b></button></td></tr></tbody></table>
+		</div>
+		</div>
+</div>	 
+</div>
+<div ng-show="showMe10">
+<div class="col-sm-4">
+</div>
+	  <div class="col-sm-6">
+       <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Target IP Address</h3>
+  </header>
+  <br>
+    <label>Select Host</label></br>
+    <select id="member" name="member" title="Please Select Host" style="width:340px; height:40px">
+          <option value=""></option>
+          <option value="windows"> 3257499101_561126_10.203.189.98</option>
+          <option value="mac">3257499101_561126_10.203.189.87</option>
+		  <option value="linux">3257499101_561126_10.203.189.99</option>
+		  <option value="windows"> 3257499101_561126_10.203.189.86</option>
+          <option value="mac">3257499101_561126_10.203.189.85</option>
+		  <option value="linux">3257499101_561126_10.203.189.84</option>
+		  <option value="windows"> 3257499101_561126_10.203.189.83</option>
+          <option value="mac">3257499101_561126_10.203.189.81</option>
+		  <option value="linux">3257499101_561126_10.203.189.82</option>
+		  <option value="windows"> 3257499101_561126_10.203.189.89</option>
+          <option value="mac">3257499101_561126_10.203.189.90</option>
+		  <option value="linux">3257499101_561126_10.203.189.91</option>
+        </select>
+  <br>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10">
+	   <div ng-show="saved10"><h4><b><i style="color:green">Executing Successfully</i></b></h4></div>
+  <div ng-show="save10">
+        <button class="w3-btn w3-green w3-ripple" ng-click="execute()">&#9998;Execute</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+		<div class="col-sm-4">
+</div>
+</div>
+	 <div ng-show="showMe9">
+           <div class="container-fluid">
+	  <div class="row">
+	  <div class="col-sm-6">
+       <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Host Details</h3>
+  </header>
+  <ul class="w3-ul">
+    <li ng-repeat="x in products" class="w3-padding-16">{{x}}<button class="w3-btn w3-ripple" ng-click="edit()">&#9998; Edit</button><span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">X</span></li>
+  </ul>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10">
+        <button class="w3-btn w3-green w3-ripple" ng-click="createHost()">&#9998; Create New Host</button>
+      </div>
+    </div>
+    <p class="w3-text-red">{{errortext}}</p>
+  </div>
+</div>
+        </div>
+	<div ng-show="showMe9a" >
+	<div class="col-sm-6" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Edit Host Details</h3>
+  </header>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <label>IP Address:</label>
+    <input class="w3-input w3-border" type="text" ng-model="fName"  placeholder="IP Address">
+  <br>
+    <label>User Name:</label>
+    <input class="w3-input w3-border" type="text" ng-model="lName" ng-disabled="!edit" placeholder="User Name" >
+  <br>
+    <label>Password:</label>
+    <input class="w3-input w3-border" type="password" ng-model="passw1" ng-disabled="!edit" placeholder="Password" >
+  <br>
+    <label>Select Operating System:</label></br>
+    <select id="member" name="member" title="Please select member type" style="width:340px; height:40px">
+          <option value="">Select Operating Type</option>
+          <option value="windows"> Microsoft Windows</option>
+          <option value="mac">Mac OS X</option>
+		  <option value="linux">Linux</option>
+        </select>
+  <br>
+  <div class="w3-row w3-margin-top">
+  <div ng-show="saved9a"><h4><b><i style="color:green">Saved Successfully</i></b></h4></div>
+  <div ng-show="save9a"><button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete" ng-click="saveinfo9a()">&#10004; Save Changes</button></div></div>
+	</div>
+	</div>
+		</div>
+			<div ng-show="showMe9b" >
+	<div class="col-sm-6" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Create New Host</h3>
+  </header>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <label>IP Address:</label>
+    <input class="w3-input w3-border" type="text" ng-model="fName"  placeholder="IP Address">
+  <br>
+    <label>User Name:</label>
+    <input class="w3-input w3-border" type="text" ng-model="lName"  placeholder="User Name">
+  <br>
+    <label>Password:</label>
+    <input class="w3-input w3-border" type="password" ng-model="passw1" placeholder="Password">
+  <br>
+   <label>Confirm Password:</label>
+    <input class="w3-input w3-border" type="password" ng-model="passw1" placeholder="Password">
+  <br>
+  <div class="w3-row w3-margin-top">
+  <div ng-show="saved9b"><h4><b><i style="color:green">Saved Successfully</i></b></h4></div>
+  <div ng-show="save9b"><button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete" ng-click="saveinfo9b()">&#10004; Create</button></div></div>
+	</div>
+	</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	  <div ng-show="showMe8">
+	  <div class="container-fluid">
+	  <div class="row">
+	  <div class="col-sm-6">
+       <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Target List</h3>
+  </header>
+  <ul class="w3-ul">
+    <li ng-repeat="x in products" class="w3-padding-16">{{x}}<button class="w3-btn w3-ripple" ng-click="editUser()">&#9998; Edit</button><span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">X</span></li>
+  </ul>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10">
+        <input placeholder="Add Targets here" ng-model="addMe" class="w3-input w3-border w3-padding">
+      </div>
+      <div class="w3-col s2">
+        <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
+      </div>
+    </div>
+	<p class="w3-text-red">{{errortext}}</p>
+  </div>
+</div>
+        </div>
+	<div ng-show="showMe8a" >
+	<div class="col-sm-6" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Edit List</h3>
+  </header>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <label>IP Address:</label>
+    <input class="w3-input w3-border" type="text" ng-model="fName"  placeholder="IP Address">
+  <br>
+    <label>User Name:</label>
+    <input class="w3-input w3-border" type="text" ng-model="lName"  placeholder="User Name">
+  <br>
+    <label>Password:</label>
+    <input class="w3-input w3-border" type="password" ng-model="passw1" placeholder="Password">
+  <br>
+    <label>Select Operating System:</label></br>
+    <select id="member" name="member" title="Please select member type" style="width:340px; height:40px">
+          <option value="">Select Operating Type</option>
+          <option value="windows"> Microsoft Windows</option>
+          <option value="mac">Mac OS X</option>
+		  <option value="linux">Linux</option>
+        </select>
+  <br>
+  <div class="w3-row w3-margin-top">
+  <div ng-show="saved8a"><h4><b><i style="color:green">Saved Successfully</i></b></h4></div>
+  <div ng-show="save8a"><button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete" ng-click="saveinfo8a()">&#10004; Save Changes</button></div></div>
+	</div>
+	</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		
+<div ng-show="showMe3">
+<div class="container-fluid">
+<div class="row">
+ <p><h1>Welcome To Wipro Products</h1></p>
+<div class="col-sm-6" id="row1">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" id="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://my-test-11.slatic.net/shop/8e6adb32c60cf4fb6816f0722098a1c9.jpg?width=1400"></div>
+    <div class="item">
+      <img src="https://www.anphabe.com/file-deliver.php?key=hcWDxaBjm7TXnZedhtmlrtKWiG3ZcGOgWtaWr1qhqG5mbluboZ1UoJlrZJxtb2hobqacZGmeUpvJnpWlztnD18XQ18mIa9Rzl5echdTbk6HPlKBhlaai1Z7NoZ2XypqalKmlqZein8aXll7Tpp1UcLA." alt="New York">
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div class="col-sm-6" id="row2">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" id="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://image.talentnetwork.vn/wipro///news/2017/09/05/1504603274_banner-company-1.jpg"></div>
+
+    <div class="item">
+      <img src="https://image.talentnetwork.vn/wipro///news/2017/10/20/1508488513_spirit-of-wipro-en-10.2017.png" alt="Chicago">
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</div>
+</div>
+<div  ng-show="showMe4">
+<div class="container-fluid">
+<div class="row">
+<div class="tab-content">
+<div class="col-sm-4">
+
+<p><b><h3>SAFEWASH</h3></b></P></br>
+
+	<p><b><h5>Safewash</h5></b></P></br>
+
+  <img src="https://content3.jdmagicbox.com/navi_mumbai/63/022p9009063/catalogue/wipro-consumer-care-and-lighting-vashi-navi-mumbai-consumer-products-manufacturers-li03e.jpg" alt="Los Angeles" style="width:45%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+    <li><a data-toggle="pill" href="#menu1"><b>Description</b></a></li></br></br>
+
+	<a href="#menuP1" ng-click="product1()"><h4><b>Click Here</b></a> for more info</h4>
+
+  </ul>
+
+   <div id="menu1" class="tab-pane fade">
+
+      <h3>Description</h3>
+
+	  <h4>Your premium wear needs superior care be it from surprise spills or regular wear and tear. Wipro Safewash Liquid detergent is specially designed for your fine fabrics...</h4>
+
+	  </div>
+
+  </div>
+ <div class="col-sm-4">
+
+  <p><b><h3>GARNET</h3></b></P></br>
+
+	<p><b><h5>Garnet Bulb</h5></b></P></br>
+
+  <img src="https://i0.wp.com/interkarts.com/wp-content/uploads/2017/12/wipro-garnet-18W-led-bulb-3.jpg?fit=1082%2C1125&ssl=1" alt="Los Angeles" style="width:35%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+    <li><a data-toggle="pill" href="#menu2"><b>Description</b></a></li></br></br>
+
+	 <a data-toggle="pill" href="#menuP2" ng-click="product2()"><h4><b>Click Here</b></a> for more info</h4>
+
+ </ul>
+
+   <div id="menu2" class="tab-pane fade">
+
+      <h3>Description</h3>
+
+	  <h4>Wipro Garnet LED Bulbs are energy efficient home lighting solutions that provide the brightest light output while still complementing your interiors...</h4>
+
+	  </div>
+
+  </div>
+<div class="col-sm-4">
+
+  <p><b><h3>SANTOOR</h3></b></P></br>
+
+	<p><b><h5>Santoor Soap</h5></b></P></br>
+
+  <img src="https://3.imimg.com/data3/PS/RS/MY-4606076/santoor-handwash-500x500.png" alt="Los Angeles" style="width:55%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+    <li><a data-toggle="pill" href="#menu3"><b>Description</b></a></li></br></br>
+
+	<a data-toggle="pill" href="#menuP3" ng-click="product3()"><h4><b>Click Here</b></a> for more info</h4>
+
+  </ul>
+
+   <div id="menu3" class="tab-pane fade">
+
+      <h3>Description</h3>
+
+	  <h4>Santoor has grown from a traditional south Indian soap to a modern beauty soap that carries the secret of younger looking skin for wide range of women of different ages and income groups across the country...</h4>
+
+	  </div>
+
+  </div>
+	  </div>
+  </div>
+ </div>
+ </div>
+</div>
+<div  ng-show="showMe5a">
+
+<div class="row">
+
+<div class="container-fluid">
+
+<div class="tab-content">
+
+<p><div class="col-sm-7" id="row3">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" id="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="item active">
+
+      <img src="http://wcclg.com/wp-content/uploads/2015/04/Safewash-FC-01.jpg" alt="image">
+
+    </div>
+
+    <div class="item">
+
+      <img src="http://wcclg.com/wp-content/uploads/2015/04/Safewash-FC-07.jpg" alt="image">
+
+    </div>
+
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+    <span class="glyphicon glyphicon-chevron-left"></span>
+
+    <span class="sr-only">Previous</span>
+
+  </a>
+
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+    <span class="glyphicon glyphicon-chevron-right"></span>
+
+    <span class="sr-only">Next</span>
+
+  </a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="row4">
+
+<div class="container-fluid">
+
+<div class="col-sm-4">
+
+<p><b><h3>SAFEWASH</h3></b></P></br>
+
+  <img src="https://content3.jdmagicbox.com/navi_mumbai/63/022p9009063/catalogue/wipro-consumer-care-and-lighting-vashi-navi-mumbai-consumer-products-manufacturers-li03e.jpg" alt="Los Angeles" style="width:55%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+	<a href="#menu5" ng-click="access1()"><h4><b>Click Here</b></a> To Access the product</h4>
+
+  </ul>
+
+  </div>
+
+  <div class="col-sm-8">
+
+	  <div class="card">
+
+    <div class="card-body">
+
+
+
+	  <div class="table-wrapper-2">
+
+
+
+            <!--Table-->
+
+            <table class="table table-responsive-md">
+
+                <thead class="mdb-color lighten-4">
+
+                    <tr>
+
+                        <th><h2>Safewash Liquid Detergent For Daily & Premium Wear Your premium wear</h2></th>
+
+                        <th class="th-lg"></tr>
+
+                </thead></br>
+
+                <tbody>
+
+                    <tr>
+
+                        <td><h3>Your premium wear needs superior care be it from surprise spills or regular wear and tear. Wipro Safewash Liquid detergent is specially designed for your fine fabrics and festive attire. The gentle care of this detergent will not only safeguard from stains but also keep them germ free..</th>
+
+            </td>
+
+            </tr>              				
+
+    </tbody>
+
+  </table>
+
+  </div>
+
+  </div>
+
+</div>
+
+ </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<div ng-show="showMe5b">
+
+<div class="row">
+
+<div class="container-fluid">
+
+<div class="tab-content">
+
+<p><div class="col-sm-7" id="row3">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" id="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="item active">
+
+      <img src="https://www.wiproconsumerlighting.com/sites/default/files/productcategory/Web%20Category-banners-Led-Bulb.jpg" alt="image">
+
+    </div>
+
+    <div class="item">
+
+      <img src="https://www.wiproconsumerlighting.com/sites/default/files/products/Website%20New%20hero-product-Bulb.jpg" alt="image">
+
+    </div>
+
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+    <span class="glyphicon glyphicon-chevron-left"></span>
+
+    <span class="sr-only">Previous</span>
+
+  </a>
+
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+    <span class="glyphicon glyphicon-chevron-right"></span>
+
+    <span class="sr-only">Next</span>
+
+  </a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="row5">
+
+<div class="container-fluid">
+
+<div class="col-sm-4">
+
+<p><b><h3>GARNET</h3></b></P></br>
+
+  <img src="https://i0.wp.com/interkarts.com/wp-content/uploads/2017/12/wipro-garnet-18W-led-bulb-3.jpg?fit=1082%2C1125&ssl=1" alt="Los Angeles" style="width:55%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+	<a href="#menu5" ng-click="access2()"><h4><b>Click Here</b></a> To Access the product</h4>
+
+  </ul>
+
+  </div>
+
+  <div class="col-sm-8">
+
+	  <div class="card">
+
+    <div class="card-body">
+
+
+
+	  <div class="table-wrapper-2">
+
+
+
+            <!--Table-->
+
+            <table class="table table-responsive-md">
+
+                <thead class="mdb-color lighten-4">
+
+                    <tr>
+
+                        <th><h2>Garnet 23W LED Bulb</h2></th>
+
+                        <th class="th-lg"></tr>
+
+                </thead></br>
+
+                <tbody>
+
+                    <tr>
+
+                        <td><h3>The Garnet LED Bulb 23W (B22 CAP) saves 85% energy and provides light distribution in all directions, through its innovatively designed optics.
+
+</td>   
+
+                    </tr>              						
+
+    </tbody>
+
+  </table>
+
+  </div>
+
+  </div>
+
+</div>
+
+ </div>
+
+  </div>
+
+  </div>
+
+  </div>
+  <div  ng-show="showMe5c">
+
+<div class="row6">
+
+<div class="container-fluid">
+
+<div class="tab-content">
+
+<p><div class="col-sm-7" id="row3">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" id="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="item active">
+
+      <img src="http://wcclg.com/wp-content/uploads/2014/10/Santoor-HW-01.jpg" alt="image">
+
+    </div>
+
+    <div class="item">
+
+      <img src="https://www.safetykart.com/img/cms/Santoor.jpg" alt="image">
+
+    </div>
+
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+    <span class="glyphicon glyphicon-chevron-left"></span>
+
+    <span class="sr-only">Previous</span>
+
+  </a>
+
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+    <span class="glyphicon glyphicon-chevron-right"></span>
+
+    <span class="sr-only">Next</span>
+
+  </a>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="container-fluid">
+
+<div class="col-sm-4">
+
+<p><b><h3>SANTOOR</h3></b></P></br>
+
+  <img src="https://3.imimg.com/data3/PS/RS/MY-4606076/santoor-handwash-500x500.png" alt="Los Angeles" style="width:55%;"></br></br>
+
+  <ul class="nav nav-pills">
+
+	<a href="#menu5" ng-click="access3()"><h4><b>Click Here</b></a> To Access the product</h4>
+
+  </ul>
+
+  </div>
+
+  <div class="col-sm-8">
+
+	  <div class="card">
+
+    <div class="card-body">
+
+
+
+	  <div class="table-wrapper-2">
+
+
+
+            <!--Table-->
+
+            <table class="table table-responsive-md">
+
+                <thead class="mdb-color lighten-4">
+
+                    <tr>
+
+                        <th><h1>Santoor Soaps</h1><h2>The secret of younger looking skin..</h2></th>
+
+                        <th class="th-lg"></tr>
+
+                </thead></br>
+
+                <tbody>
+
+                    <tr>
+
+                        <td><h3>Sandal and Turmeric have been an essential part of Indian woman’s skin care regimen for centuries. The deep acting ingredients of Turmeric and Sadal  not just provide a smooth, soft and clear skin but also give a  youthful glow to the skin plus it has a fresh energizing and a long lasting fragrance.
+
+
+
+Santoor has grown from a traditional south Indian soap to a modern beauty soap that carries the secret of younger looking skin for wide range of women of different ages and income groups across the country.</th>
+
+            </td>
+
+        </tr>              				
+
+    </tbody>
+
+  </table>
+
+  </div>
+
+  </div>
+
+</div>
+
+ </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+ </div>
+<div class="col-sm-5">
+<div ng-show="showMe2">
+<img src="https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/05/05/Photos/Processed/wiprologo-kXmF--621x414@LiveMint.jpg" alt="wipro logo" width="70%"></br>
+</div>
+<div ng-show="showMe1"> 
+	<h3>To Login</h3><div id="circlecanvas" width="100" height="100"><a data-toggle="pill" href="#menu" ng-click="added()"><h2><b>Click Here</b></h2></a></div>
+	
+	<h4>Have you been locked out of your account? Need to reset your password? Simply go to </h4><a data-toggle="pill" href="#menu" ng-click="added()"><h3><b>https://accountservices.wipro.com</b></h3></a></div>
+	</div>
+	
+<div ng-show="showMe2">
+<div class="tab-content">
+    <div id="menu" class="tab-pane fade">
+	<h4>Sign in with your Wipro AD ID</h4>
+<div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+    </div><br>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+    </div></br>
+	<button type="button" class="btn btn-primary" ng-click="signin()">Sign in</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </form>
+  </body>
